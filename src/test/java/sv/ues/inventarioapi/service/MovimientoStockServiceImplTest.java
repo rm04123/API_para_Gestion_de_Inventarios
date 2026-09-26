@@ -45,14 +45,13 @@ class MovimientoStockServiceImplTest {
 
     @BeforeEach
     void setUp() {
-        producto = new Producto(
-                1L,
-                "PROD-001",
-                "Teclado",
-                "Teclado mecánico",
-                new BigDecimal("25.50"),
-                10
-        );
+        producto = new Producto();
+        producto.setId(1L);
+        producto.setCodigo("PROD-001");
+        producto.setNombre("Teclado");
+        producto.setDescripcion("Teclado mecánico");
+        producto.setPrecio(new BigDecimal("25.50"));
+        producto.setCantidadStock(10);
     }
 
     /**
